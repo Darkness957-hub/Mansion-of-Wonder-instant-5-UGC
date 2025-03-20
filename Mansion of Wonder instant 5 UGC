@@ -1,142 +1,71 @@
-_G.Main = {}
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
 
-function _G.Main:New(Title)
-    
-    local ScreenGui = Instance.new("ScreenGui")
-    local Frame = Instance.new("Frame")
-    local UICorner = Instance.new("UICorner")
-    UICorner.Parent = Frame
-    UICorner.CornerRadius = UDim.new(0, 10)
-    local Frame_2 = Instance.new("Frame")
-    local UIListLayout = Instance.new("UIListLayout")
-    local TextLabel = Instance.new("TextLabel")
-    local TextLabel_1 = Instance.new("TextLabel")
-    
-    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    ScreenGui.ResetOnSpawn = false
-    
-    Frame.Parent = ScreenGui
-    Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-    Frame.Position = UDim2.new(0.05382213, 0, 0.274487466, 0)
-    Frame.Size = UDim2.new(0, 150, 0, 110)
-    
-    Frame_2.Parent = Frame
-    Frame_2.BackgroundTransparency = 1
-    Frame_2.BorderSizePixel = 0
-    Frame_2.Position = UDim2.new(0.0624024495, 0, 0.145615742, 0)
-    Frame_2.Size = UDim2.new(0, 280, 0, 170)
-    
-    UIListLayout.Parent = Frame_2
-    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-    UIListLayout.Padding = UDim.new(0, 10)
-    
-    TextLabel.Parent = Frame
-    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel.BackgroundTransparency = 1.000
-    TextLabel.LayoutOrder = 5
-    TextLabel.Position = UDim2.new(0, 0, 0, 5)
-    TextLabel.Size = UDim2.new(0, 150, 0, 20)
-    TextLabel.ZIndex = 2
-    TextLabel.Font = Enum.Font.GothamBold
-    TextLabel.Text = Title
-    TextLabel.TextColor3 = Color3.fromRGB(232, 232, 232)
-    TextLabel.TextScaled = true
-    TextLabel.TextSize = 14.000
-    TextLabel.TextWrapped = true
-    
-    TextLabel_1.Parent = Frame
-    TextLabel_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel_1.BackgroundTransparency = 1.000
-    TextLabel_1.Position = UDim2.new(0, 64, 0, 100)
-    TextLabel_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel_1.TextSize = 14.000
-    TextLabel_1.TextColor3 = Color3.fromRGB(232, 232, 232)
-    TextLabel_1.Text = "Youtube: Darkness"
-    TextLabel_1.Font = Enum.Font.GothamBold
-    
-    
-    
-    local function MVMBOL_fake_script()
-        local script = Instance.new('LocalScript', Frame)
-        
-        script.Parent.Active = true
-        script.Parent.Draggable = true
-    end
-    coroutine.wrap(MVMBOL_fake_script)()
-    
-    _G.Frame = {}
-    
-    function _G.Frame:Button(Name,Call)
-        
-        local TextButton = Instance.new("TextButton")
-        
-        TextButton.Parent = Frame
-        TextButton.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-        TextButton.BorderSizePixel = 0
-        TextButton.Size = UDim2.new(0, 140, 0, 30)
-        TextButton.Font = Enum.Font.SourceSansBold
-        TextButton.Text = Name
-        TextButton.TextColor3 = Color3.fromRGB(235, 235, 235)
-        TextButton.TextSize = 20.000
-        TextButton.TextWrapped = true
-        TextButton.Position = UDim2.new(0, 5, 0, 40)
-        
-        local UICorner = Instance.new("UICorner")
-        UICorner.Parent = TextButton
-        UICorner.CornerRadius = UDim.new(0, 5)
-        
-        TextButton.MouseButton1Click:Connect(function()
-            
-            local args = {
-            [1] = "Glimmer" --1
-            }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RedeemCode"):FireServer(unpack(args))           
-            
-            local args = {
-            [1] = "Boardwalk" --2
-            }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RedeemCode"):FireServer(unpack(args))
-            
-            local args = {
-            [1] = "ParticleWizard" --3
-            }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RedeemCode"):FireServer(unpack(args))
-            
-            local args = {
-            [1] = "ThingsGoBoom" --4
-            }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RedeemCode"):FireServer(unpack(args))
-            
-            local args = {
-            [1] = "FXArtist" --5
-            }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RedeemCode"):FireServer(unpack(args))            
-            
-            pcall(Call)
-            
-        end)
-        
-    end
-    
-    return _G.Frame
-    
+]]--
+
+-- Example Code:
+local a = ((16164 + (((3864 + 364101) - 274396) - 67600)) + (190952 - 110638))
+a = a + ((113 - (26 + 67)) + (1219 - (119 + 997))) -- Example obfuscation
+
+-- To hide your precious values, try obfuscating them!
+-- Click the [Literals] button in the upper-right corner
+local b = 1203456
+local c = 1230471
+local d = 8023481
+
+-- The below if-statement is opque and can be predicted as
+-- all conditions are staticly defined
+if c > b then
+    print("true")
 end
 
---Script Here
+-- You may want to obfuscate such if-statements by using
+-- the [Junk-If] button in the upper right corner
+if 1 + d > c then
+    print("obfuscate the conditions!")
+end
 
-local Frame1 = _G.Main:New("Mansion of Wonder") -- title
+-- Next is [Strings], which will encrypt all strings but adds
+-- extra code to decrypt them at runtime.
+print("Clicking [Strings] will completely hide this string!")
 
-Frame1:Button("Instant 5 UGC",function() -- button name
-    print("Hello")
-end)
+-- Another important thing is to hide the order of things that get executed
+-- to confuse an attacker using Control Flow Flattening. With [CFF v1] we can hide
+-- the control flow of the following blocks.
+do
+   function sieve_of_eratosthenes(n)
+   local is_prime = { }
+       for i = 1, n do
+           is_prime[i] = 1 ~= i
+       end
+       for i = 2, math.floor(math.sqrt(n)) do
+           if is_prime[i] then
+               for j = i* i, n, i do
+                   is_prime[j] = false
+               end
+           end
+       end
+       return is_prime
+   end
+   local primes = sieve_of_eratosthenes(420)
+   for key, value in pairs(primes) do
+       if (value) then
+           print("Prime found: " .. key)
+       end
+   end
+end
 
---End
+-- You might be satisfied with your result, but before sharing your work you should
+-- use [Minify] (under Miscellaneous) to destroy all local variables and comments.
+-- Please note that some pre-configured obfuscate buttons already do this for you ;)
+print("How to obfuscate best?")
 
-return _G.Main
-
+-- The highest level of obfuscation is done through virtualization,
+-- in our case this means we will be running Lua inside Lua using the
+-- Ironbrew2 virtulization tool. Ready? click [Demo VM] and see what happens!
